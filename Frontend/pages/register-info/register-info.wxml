@@ -1,0 +1,88 @@
+<!-- pages/register-info/register-info.wxml -->
+<view class="container">
+  <!-- 头像更换 -->
+  <view class="avatar-section">
+    <view class="avatar-container">
+      <image class="avatar" src="{{avatarUrl}}" bindtap="chooseAvatar"></image>
+      <text class="avatar-text">点击更换头像</text>
+    </view>
+  </view>
+
+  <!-- 表单区域 -->
+  <view class="form-section">
+    <!-- 学号 -->
+    <view class="form-item">
+      <text class="label">学号</text>
+      <input class="input" placeholder="请输入学号" bindinput="inputChange" data-field="studentId"></input>
+    </view>
+
+    <!-- 微信昵称 -->
+    <view class="form-item">
+      <text class="label">微信昵称</text>
+      <input type="nickname" class="input" placeholder="请输入微信昵称" bindinput="inputChange" data-field="nickName"></input>
+    </view>
+
+    <!-- 密码 -->
+    <view class="form-item">
+      <text class="label">密码</text>
+      <input type="password" class="input" placeholder="请输入密码" bindinput="inputChange" data-field="password"></input>
+    </view>
+
+    <!-- 姓名 -->
+    <view class="form-item">
+      <text class="label">姓名</text>
+      <input class="input" placeholder="请输入姓名" bindinput="inputChange" data-field="name"></input>
+    </view>
+
+    <!-- 年龄 -->
+    <view class="form-item">
+  <text class="label">年龄</text>
+  <picker mode="date" value="{{birthday}}" start="1990-01-01" end="2030-12-31" bindchange="birthdayChange">
+    <view class="picker-container">
+      <input class="input" placeholder="请选择出生日期" value="{{birthday}}" disabled></input>
+      <!-- <text class="picker-arrow">▼</text> -->
+    </view>
+  </picker>
+</view>
+
+    <!-- 性别 -->
+    <view class="form-item">
+      <text class="label">性别</text>
+      <view class="gender-container">
+        <view class="gender-item {{gender === 'male' ? 'selected' : ''}}" bindtap="selectGender" data-gender="male">
+          <text>男</text>
+        </view>
+        <view class="gender-item {{gender === 'female' ? 'selected' : ''}}" bindtap="selectGender" data-gender="female">
+          <text>女</text>
+        </view>
+      </view>
+    </view>
+
+    <!-- 班级 -->
+    <view class="form-item">
+      <text class="label">班级</text>
+      <picker class="picker" range="{{classList}}" bindchange="classChange">
+        <view class="picker-content">
+          <text>{{selectedClass || '请选择班级'}}</text>
+          <text class="picker-arrow">▼</text>
+        </view>
+      </picker>
+    </view>
+
+    <!-- 注册身份 -->
+    <view class="form-item">
+      <text class="label">注册身份</text>
+      <radio-group class="radio-group" bindchange="identityChange">
+        <label class="radio-item" wx:for="{{identityList}}" wx:key="value">
+          <radio value="{{item.value}}" checked="{{identity === item.value}}"/>
+          <text>{{item.label}}</text>
+        </label>
+      </radio-group>
+    </view>
+  </view>
+
+  <!-- 注册按钮 -->
+  <view class="button-section">
+    <button class="register-button" type="primary" bindtap="register">注册</button>
+  </view>
+</view>

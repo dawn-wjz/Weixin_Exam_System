@@ -1,0 +1,49 @@
+{
+  "pages": [
+    "pages/login/login",
+    "pages/Exam-student/Exam-student",
+    "pages/Exam-teacher/Exam-teacher",
+    "pages/Exam-paper/Exam-paper",
+    "pages/logs/logs",
+    "pages/register-info/register-info",
+    "pages/profile/profile"
+
+  ],
+  "window": {
+    "navigationBarTextStyle": "black",
+    "navigationBarBackgroundColor": "#ffffff"
+  },
+  "tabBar": {
+    "selectedColor": "#00E0FE",
+    "list": [
+      {
+        "pagePath": "pages/Exam-student/Exam-student",
+        "text": "考试",
+        "iconPath": "/images/考试.png",
+        "selectedIconPath": "/images/考试-选中.png"
+      },
+      {
+        "pagePath": "pages/Exam-paper/Exam-paper",
+        "text": "试卷",
+        "iconPath": "/images/星途学堂-考试_试卷.png",
+        "selectedIconPath": "/images/考试试卷.png"
+      },
+      {
+        "pagePath":"pages/profile/profile",
+        "text": "个人",
+        "iconPath": "/images/个人.png",
+        "selectedIconPath": "/images/个人中心.png"
+      }
+    ]
+  },
+  "style": "v2",
+  "componentFramework": "glass-easel",
+  "sitemapLocation": "sitemap.json",
+  "lazyCodeLoading": "requiredComponents",
+  "networkTimeout": {
+    "request": 10000,
+    "connectSocket": 10000,
+    "uploadFile": 300000, 
+    "downloadFile": 300000
+  }
+}

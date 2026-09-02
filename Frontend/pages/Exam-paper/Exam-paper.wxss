@@ -1,0 +1,117 @@
+/* pages/Exam-paper/Exam-paper.wxss *//* pages/Register/register.wxss */
+
+/* 页面容器 */
+.container {
+  padding: 20rpx;
+  background-color: #f5f5f5;
+  min-height: 100vh;
+}
+
+/* 分类区域 */
+.section {
+  width: 750rpx;
+  background-color: #fff;
+  border-radius: 16rpx;
+  margin-bottom: 30rpx;
+  box-shadow: 0 2rpx 10rpx rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+}
+
+/* 分类标题 */
+.section-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20rpx 30rpx;
+  border-bottom: 2rpx solid #f0f0f0;
+  background-color: #fafafa;
+}
+
+.title-text {
+  font-size: 32rpx;
+  font-weight: bold;
+  color: #333;
+}
+
+/* 状态标签 */
+.status {
+  font-size: 24rpx;
+  padding: 4rpx 16rpx;
+  border-radius: 16rpx;
+  font-weight: 500;
+}
+
+/* 已完成状态 */
+.status.completed {
+  background-color: #e6f7ff;
+  color: #1890ff;
+}
+
+/* 待提交状态 */
+.status.pending {
+  background-color: #fff7e6;
+  color: #fa8c16;
+}
+
+/* 未参加状态 */
+.status.unparticipated {
+  background-color: #f6ffed;
+  color: #52c41a;
+}
+
+/* 考试列表 */
+.exam-list {
+  padding: 10rpx;
+}
+
+/* 考试项 */
+.exam-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20rpx 30rpx;
+  border-bottom: 1rpx solid #f5f5f5;
+}
+
+.exam-item:last-child {
+  border-bottom: none;
+}
+
+/* 考试信息 */
+.exam-info {
+  flex: 1;
+}
+
+.exam-name {
+  font-size: 30rpx;
+  color: #333;
+  margin-bottom: 8rpx;
+  display: block;
+  font-weight: 500;
+}
+
+.exam-date {
+  font-size: 24rpx;
+  color: #999;
+  display: block;
+}
+
+/* 空状态提示 */
+.empty-tip {
+  text-align: center;
+  padding: 60rpx 0;
+  color: #999;
+  font-size: 28rpx;
+  background-color: #fafafa;
+  height: 100rpx;
+}
+
+/* 考试状态显示 */
+.exam-status {
+  margin-left: 20rpx;
+}
+
+.exam-status .status {
+  font-size: 22rpx;
+  padding: 2rpx 12rpx;
+}

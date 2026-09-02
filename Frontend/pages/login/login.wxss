@@ -1,0 +1,137 @@
+/**index.wxss**/
+page {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+.scrollarea {
+  flex: 1;
+  overflow-y: hidden;
+}
+
+.userinfo {
+  margin: 50rpx auto;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: rgb(0, 0, 0);
+  /* width: 80%; */
+  /* border: 2rpx solid black; */
+  /* height: 60%; */
+  
+}
+
+.avatar-btn{
+  padding: 0;
+  width: 250rpx;
+  height: 320rpx;
+  margin-top: 45rpx;
+  background: none;
+  
+  
+}
+.avatar {
+  display: block;
+  width: 280rpx;
+  height: 280rpx;
+  border-radius: 50%;
+  border: 4rpx solid pink;
+  overflow: hidden;
+  margin: 20rpx auto;
+  
+
+}
+
+.nickname-box{
+  /* flex: 1; */
+  padding: 0;
+  margin-top: 60rpx;
+  box-sizing: border-box;
+  
+}
+
+.nickname-label {
+  width: 75px;
+  float: left;
+  padding: 15rpx;
+  font-size: 35rpx;
+  margin-top: 20rpx;
+
+
+}
+.nickname{
+  padding: 0;
+  /* display: flex; */
+  width: 500rpx;
+  height: 100rpx;
+  border: 2rpx solid rgb(182, 7, 252);
+  border-radius: 15rpx;
+  margin-bottom: 100rpx;
+  margin-right: 100rpx;
+  text-align: center !important;
+  font-size: 35rpx;
+  
+  
+
+  /* line-height: 100rpx; */
+  
+  
+}
+input[type="password"] {
+  margin-bottom: 20rpx;
+}
+
+.submit{
+  width: 550rpx !important;
+  height: 125rpx;
+  border-radius: 45rpx;
+  margin-top: 60rpx;
+  line-height: 100rpx;
+  font-size: 45rpx;
+  color: aliceblue;
+  background-color: dodgerblue;
+
+}
+
+.Register-box {
+  display: block;
+  width: 245rpx;
+  /* margin-top: 20rpx; */
+  margin-left: 65%;
+  border-bottom: 3rpx solid rgb(0, 90, 192);
+  
+}
+.Register-box text{
+  display: block;
+  box-sizing: border-box;
+  color: rgb(252, 145, 46);
+  font-size: 25rpx;
+}
+
+.role-box{
+  
+  width: 750rpx;
+  height: 150rpx;
+  /* border: 2rpx solid lime; */
+  margin: 30rpx auto;
+}
+
+.role-title{
+  flex: 1;
+  color: darkgrey;
+  width: 750rpx;
+  font-size: 32rpx;
+  margin: 10rpx auto;
+}
+.picker{
+  flex: 1;
+  width: 550rpx;
+  height:90rpx;
+  background-color: rgb(216, 216, 216);
+  margin: 0 auto;
+  border-radius:15px ;
+  font-size: 35rpx;
+  text-align: center;
+  line-height: 90rpx;
+}

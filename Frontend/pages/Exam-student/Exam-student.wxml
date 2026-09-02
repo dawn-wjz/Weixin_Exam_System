@@ -1,0 +1,38 @@
+<!--pages/Exam/Exam.wxml-->
+<scroll-view class="scrollarea" scroll-y>
+  <view class="pubilcty-box">
+      <swiper class="publicity" 
+      indicator-dots="ture"   
+      indicator-color="#077FFF"
+      indicator-active-color="#F8F8F8"
+      circular autoplay>
+    <swiper-item>
+      <image src="/images/QQ20251223-225159.png" mode=""/>
+    </swiper-item>
+    <swiper-item>
+      <image src="https://ts4.tc.mm.bing.net/th/id/OIP-C.eM8o9oMMrs2aeL-XjPHPiQHaDg?cb=ucfimgc2&rs=1&pid=ImgDetMain&o=7&rm=3" mode=""/>
+    </swiper-item>
+    <swiper-item>
+      <image src="https://ts1.tc.mm.bing.net/th/id/R-C.6112977b14c46c1c38e5194807b32b0a?rik=RwfxZ7E9MTQ47w&riu=http%3a%2f%2fn.sinaimg.cn%2fsinakd10011%2f212%2fw607h405%2f20200409%2fb882-iryninw8021786.jpg&ehk=swtiZF6CorS7U%2fnnJKN5FbyWXY5H3odvMSmztWKgniE%3d&risl=&pid=ImgRaw&r=0" mode=""/>
+    </swiper-item>
+    <swiper-item>
+      <image src="https://hao6.qhimg.com/t018250e0ab342ef17e.jpg" mode=""/>
+    </swiper-item>
+      </swiper>
+  </view> 
+  <view class="function">
+    <view class="upload">
+      <view class="img-ui">
+        <image src="/images/下载试卷_点击.png" mode="" bind:tap="downloadPaper"/>
+        <view class="red-dot" wx:if="{{hasUploadedFiles}}"></view>
+      </view>
+      <text>下载试卷</text>
+    </view>
+    <view class="download">
+      <view class="img-ui2">
+        <image src="/images/已交卷人数.png" mode="" bind:tap="uploadPaper"/>
+      </view>
+      <text>交卷</text>
+    </view>
+  </view>
+</scroll-view>

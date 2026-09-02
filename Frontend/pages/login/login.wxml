@@ -1,0 +1,34 @@
+<!--index.wxml-->
+<scroll-view class="scrollarea" scroll-y >
+    <view class="userinfo">
+      <button class="avatar-btn" open-type="chooseAvatar" bindchooseavatar="onChooseAvatar">
+        <image class="avatar" src="{{ userInfo.avatarUrl }}" />
+      </button>
+      <view class="nickname-box">
+        <text class="nickname-label">用户名：</text>
+        <input type="nickname" class="nickname" placeholder="请输入昵称" bindinput="onNicknameInput" value="{{ userInfo.nickName }}" />
+        <text class="nickname-label">密码：</text>
+        <input type="password" class="nickname" placeholder="请输入密码" bindinput="onPasswordInput" />
+
+
+        <view class="Register-box">
+        <text class="Register" bindtap="Register">{{motto}}</text>
+
+        </view>        
+        <view class="role-box">
+          <view class="role-title">------------------------身份选择-----------------------</view>
+            <picker mode="multiSelector" header-text="选择身份" range="{{ roleArray }}" value="{{ roleIndex }}" bindchange="bindRolePickerChange" >
+              <view class="picker">
+                {{roleArray[0][roleIndex[0]]}} | {{roleArray[1][roleIndex[1]]}}
+              </view>
+            </picker>        
+          
+        </view>
+
+
+        <button class="submit" bindtap="onLogin" size="default">登录</button>
+      </view>
+    
+  </view>
+  
+</scroll-view>

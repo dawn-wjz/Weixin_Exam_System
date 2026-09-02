@@ -1,0 +1,161 @@
+page {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  color:#F8F9F9;
+  background-color: rgb(216, 216, 216);
+  
+}
+.scrollarea {
+  flex: 1;
+  overflow-y: hidden;
+}
+.pubilcty-box{
+  width: 750rpx;
+  height: 400rpx;
+  /* border: 2rpx solid greenyellow; */
+  /* margin-bottom: 15rpx; */
+}
+.publicity{
+  width: 100%;
+  height: 100%;
+}
+.publicity image{
+  width: 100%;
+  height: 100%;
+}
+
+.function{
+  display: flex;
+  width: 750rpx;
+  /* height: 350rpx; */
+  border-radius: 100rpx;
+  background-color: ghostwhite;
+  margin-top: 25rpx;
+}
+
+.function image{
+  width: 100%;
+  height: 100%;
+}
+.function text{
+  color: deeppink;
+  font-size: 40rpx;
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+}
+.upload{
+  flex: 1;
+  width: 50vw;
+  height: 365rpx;
+  border-right: 1rpx solid deeppink;
+}
+.download{
+  flex: 1;
+  width: 50vw; 
+  height: 365rpx;
+  border-left: 1rpx solid deeppink;
+}
+.img-ui{
+  width: 250rpx;
+  height: 250rpx;
+  /* border: 2rpx solid springgreen; */
+  margin: 25rpx auto;
+}
+.img-ui2{
+  width: 210rpx;
+  height: 210rpx;
+  /* border: 2rpx solid springgreen; */
+  margin: 40rpx auto;
+  margin-bottom: 55rpx;
+}
+
+
+/* 上传中指示器 */
+.uploading-indicator {
+  width: 250rpx;
+  height: 250rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.05);
+  border-radius: 20rpx;
+}
+
+.uploading-text {
+  color: #00E0FE;
+  font-size: 32rpx;
+  font-weight: bold;
+}
+
+/* 上传进度容器 */
+.upload-progress-container {
+  margin: 20rpx 40rpx;
+  padding: 20rpx;
+  background-color: rgba(0, 0, 0, 0.03);
+  border-radius: 10rpx;
+}
+
+/* 选中的文件名 */
+.selected-file {
+  margin-bottom: 20rpx;
+}
+
+.file-name {
+  color: #333;
+  font-size: 28rpx;
+  word-break: break-all;
+}
+
+/* 进度条容器 */
+.progress-bar-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15rpx;
+}
+
+/* 进度条 */
+.progress-bar {
+  flex: 1;
+  height: 12rpx;
+  background-color: #e0e0e0;
+  border-radius: 6rpx;
+  overflow: hidden;
+  margin-right: 20rpx;
+}
+
+/* 进度填充 */
+.progress-fill {
+  height: 100%;
+  background-color: #00E0FE;
+  border-radius: 6rpx;
+  transition: width 0.3s ease;
+}
+
+/* 进度百分比 */
+.progress-text {
+  color: #00E0FE;
+  font-size: 28rpx;
+  font-weight: bold;
+  min-width: 80rpx;
+  text-align: right;
+}
+
+/* 上传状态 */
+.upload-status {
+  margin-top: 10rpx;
+}
+
+.status-text {
+  font-size: 28rpx;
+  font-weight: bold;
+}
+
+.status-text.success {
+  color: #07C160;
+}
+
+.status-text.fail {
+  color: #F56C6C;
+}

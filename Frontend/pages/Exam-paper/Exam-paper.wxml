@@ -1,0 +1,80 @@
+<!--pages/Register/register.wxml-->
+<view class="container">
+  <!-- 已完成的考试 -->
+  <view class="section">
+    <view class="section-title">
+      <text class="title-text">已完成的考试</text>
+      <text class="status completed">已提交</text>
+    </view>
+    
+    <!-- 有数据时渲染列表 -->
+    <view class="exam-list" wx:if="{{completedExams.length > 0}}">
+      <view class="exam-item" wx:for="{{completedExams}}" wx:key="id">
+        <view class="exam-info">
+          <text class="exam-name">{{item.name}}</text>
+          <text class="exam-date">{{item.date}}</text>
+        </view>
+        <view class="exam-status">
+          <text class="status completed">已完成</text>
+        </view>
+      </view>
+    </view>
+    
+    <!-- 无数据时显示提示 -->
+    <view class="empty-tip" wx:else>
+      <text>暂无已完成的考试</text>
+    </view>
+  </view>
+  
+  <!-- 待提交的试卷 -->
+  <view class="section">
+    <view class="section-title">
+      <text class="title-text">待提交的试卷</text>
+      <text class="status pending">已下载</text>
+    </view>
+    
+    <!-- 有数据时渲染列表 -->
+    <view class="exam-list" wx:if="{{pendingExams.length > 0}}">
+      <view class="exam-item" wx:for="{{pendingExams}}" wx:key="id">
+        <view class="exam-info">
+          <text class="exam-name">{{item.name}}</text>
+          <text class="exam-date">{{item.date}}</text>
+        </view>
+        <view class="exam-status">
+          <text class="status pending">待提交</text>
+        </view>
+      </view>
+    </view>
+    
+    <!-- 无数据时显示提示 -->
+    <view class="empty-tip" wx:else>
+      <text>暂无待提交的试卷</text>
+    </view>
+  </view>
+  
+  <!-- 未参加的考试 -->
+  <view class="section">
+    <view class="section-title">
+      <text class="title-text">未参加的考试</text>
+      <text class="status unparticipated">未下载</text>
+    </view>
+    
+    <!-- 有数据时渲染列表 -->
+    <view class="exam-list" wx:if="{{unparticipatedExams.length > 0}}">
+      <view class="exam-item" wx:for="{{unparticipatedExams}}" wx:key="id">
+        <view class="exam-info">
+          <text class="exam-name">{{item.name}}</text>
+          <text class="exam-date">{{item.date}}</text>
+        </view>
+        <view class="exam-status">
+          <text class="status unparticipated">未参加</text>
+        </view>
+      </view>
+    </view>
+    
+    <!-- 无数据时显示提示 -->
+    <view class="empty-tip" wx:else>
+      <text>暂无未参加的考试</text>
+    </view>
+  </view>
+</view>

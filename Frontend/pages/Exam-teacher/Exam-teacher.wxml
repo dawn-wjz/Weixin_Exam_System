@@ -1,0 +1,59 @@
+<!--pages/Exam-teacher/Exam-teacher.wxml-->
+<scroll-view class="scrollarea" scroll-y>
+  <view class="pubilcty-box">
+      <swiper class="publicity" 
+      indicator-dots="ture"   
+      indicator-color="#077FFF"
+      indicator-active-color="#F8F8F8"
+      circular autoplay>
+    <swiper-item>
+      <image src="/images/QQ20251223-225159.png" mode=""/>
+    </swiper-item>
+    <swiper-item>
+      <image src="https://ts4.tc.mm.bing.net/th/id/OIP-C.eM8o9oMMrs2aeL-XjPHPiQHaDg?cb=ucfimgc2&rs=1&pid=ImgDetMain&o=7&rm=3" mode=""/>
+    </swiper-item>
+    <swiper-item>
+      <image src="https://ts1.tc.mm.bing.net/th/id/R-C.6112977b14c46c1c38e5194807b32b0a?rik=RwfxZ7E9MTQ47w&riu=http%3a%2f%2fn.sinaimg.cn%2fsinakd10011%2f212%2fw607h405%2f20200409%2fb882-iryninw8021786.jpg&ehk=swtiZF6CorS7U%2fnnJKN5FbyWXY5H3odvMSmztWKgniE%3d&risl=&pid=ImgRaw&r=0" mode=""/>
+    </swiper-item>
+    <swiper-item>
+      <image src="https://hao6.qhimg.com/t018250e0ab342ef17e.jpg" mode=""/>
+    </swiper-item>
+      </swiper>
+  </view> 
+  <view class="function">
+    <view class="upload">
+      <view class="img-ui">
+        <image src="/images/发布专家文章.png" mode="" bind:tap="uploadExam" wx:if="{{!isUploading}}"/>
+        <view class="uploading-indicator" wx:else>
+          <text class="uploading-text">上传中...</text>
+        </view>
+      </view>
+      <text>发布试卷</text>
+      
+      <!-- 文件选择和上传进度显示 -->
+      <view class="upload-progress-container" wx:if="{{selectedFileName || isUploading}}">
+        <view class="selected-file" wx:if="{{selectedFileName}}">
+          <text class="file-name">{{selectedFileName}}</text>
+        </view>
+        
+        <view class="progress-bar-container" wx:if="{{isUploading}}">
+          <view class="progress-bar">
+            <view class="progress-fill" style="width: {{uploadProgress}}"></view>
+          </view>
+          <text class="progress-text">{{uploadProgress}}%</text>
+        </view>
+        
+        <view class="upload-status" wx:if="{{uploadStatus}}">
+          <text class="status-text success" wx:if="{{uploadStatus === 'success'}}">上传成功</text>
+          <text class="status-text fail" wx:if="{{uploadStatus === 'fail'}}">上传失败</text>
+        </view>
+      </view>
+    </view>
+    <view class="download">
+      <view class="img-ui2">
+        <image src="/images/后台 批卷.png" mode="" bind:tap="selectExam"/>
+      </view>
+      <text>阅卷</text>
+    </view>
+  </view>
+</scroll-view>
